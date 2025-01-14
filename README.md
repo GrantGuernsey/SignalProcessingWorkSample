@@ -27,5 +27,5 @@ A machine learning approach using a Random Forest classifier can also be employe
 4. **Refine Matches with DTW**: Calculate DTW distances for the top 3 matches and select the best match. This is to eliminate any faulty matches (such as finding a better match in the wrong direction).
 5. **Measure Runtime**: Measure the per-experimental-signal runtime required for processing.
 
-## Performance and conclusion
+### Performance and conclusion
 The per-experimental runtime result was an average of 0.003951 seconds, and the average distance (how good of a match was found) was about 48% greater than the DTW approach (the greater the value the worse the match). The average runtime is still fast, but it is approximately 5 times slower than the DTW approach. The benefit of this approach is its scalability. The runtime will increase by a significantly smaller amount if we have a large number of reference signals, long reference signals, and any size of experimental data. In trade-off for runtime efficiency, we gain the ability to scale this application without experiencing the same detrimental effects on runtime.
